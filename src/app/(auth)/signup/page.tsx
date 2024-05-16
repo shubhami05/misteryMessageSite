@@ -107,7 +107,7 @@ const SignupPage = () => {
                                         />
                                     </FormControl>
                                     {
-                                        isCheckingUsername && <Loader2 className='animate-spin' />
+                                        isCheckingUsername && <Loader2 className="animate-spin" />
                                     }
                                     <p className={`text-sm ${usernameMsg === "Username is available" ? 'text-green-500' : 'text-red-500'}`}>
                                          {usernameMsg}
@@ -123,7 +123,7 @@ const SignupPage = () => {
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Email" {...field} />
+                                        <Input placeholder="Enter your email" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
