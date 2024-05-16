@@ -123,7 +123,7 @@ const SignupPage = () => {
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
                                     <FormControl>
-                                        <Input type='email' placeholder="Enter your email" {...field} />
+                                        <Input type="email" placeholder="Enter your email" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -136,7 +136,7 @@ const SignupPage = () => {
                                 <FormItem>
                                     <FormLabel>Password</FormLabel>
                                     <FormControl>
-                                        <Input type='password' placeholder="Password" {...field} />
+                                        <Input type="password" placeholder="Password" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
