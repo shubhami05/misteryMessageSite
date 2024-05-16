@@ -53,7 +53,7 @@ const DashboardPage = () => {
         finally {
             setIsSwitchLoading(false)
         }
-    }, [setValue, toast,messages])
+    }, [setValue, toast])
 
     const fetchMessages = useCallback(async (refresh: boolean = false) => {
         setIsLoading(true)
