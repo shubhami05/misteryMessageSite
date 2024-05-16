@@ -71,8 +71,8 @@ const MessageCard = ({ message, onMessageDelete }: MessageCardProps) => {
                 </AlertDialog>
 
             </CardHeader>
-            <CardContent>
-                <p>{messageData.content}</p>
+            <CardContent className='break-words'>
+                {messageData.content}
             </CardContent>
 
         </Card>

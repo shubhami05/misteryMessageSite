@@ -40,6 +40,7 @@ const VerifyAccount = () => {
 
     const onSubmitForm = async (data: z.infer<typeof verifySchema>) => {
         try {
+            console.log(params.username)
             const response = await axios.post('/api/verifyCode', {
                 username: params.username,
                 code: data.code
@@ -86,8 +87,6 @@ const VerifyAccount = () => {
                                                 <InputOTPSlot index={0} />
                                                 <InputOTPSlot index={1} />
                                                 <InputOTPSlot index={2} />
-                                            </InputOTPGroup>
-                                            <InputOTPGroup>
                                                 <InputOTPSlot index={3} />
                                                 <InputOTPSlot index={4} />
                                                 <InputOTPSlot index={5} />

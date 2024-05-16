@@ -28,17 +28,19 @@ export async function POST(request: NextRequest) {
         const verifyCode = Math.floor(100000 + Math.random() * 900000).toString();
 
         if (existingUserByEmail) {
-            if(existingUserByEmail.isVerified){
-                return Response.json({
-                    success: false,
-                    message: "Email already exists"
-                },
+            if (existingUserByEmail.isVerified) {
+                return Response.json(
+                    {
+                        success: false,
+                        message: "Email already exists"
+                    },
                     {
                         status: 400
                     })
             }
-            else{
-                const hashedPassword = await bcrypt.hash(password,10)
+            else {
+                const hashedPassword = await bcrypt.hash(password, 10)
+                existingUserByEmail.username = username
                 existingUserByEmail.password = hashedPassword;
                 existingUserByEmail.verifyCode = verifyCode;
                 existingUserByEmail.verifyCodeExpiry = new Date(Date.now() + 3600000);
@@ -60,7 +62,6 @@ export async function POST(request: NextRequest) {
                 isAcceptingMessage: true,
                 messages: []
             })
-
             await newUser.save();
         }
 
@@ -82,10 +83,11 @@ export async function POST(request: NextRequest) {
             })
         }
 
-        return Response.json({
-            success: true,
-            message: "User registered successfully, Please Verify yoor email"
-        },
+        return Response.json(
+            {
+                success: true,
+                message: "User registered successfully, Please Verify your email"
+            },
             {
                 status: 201
             })

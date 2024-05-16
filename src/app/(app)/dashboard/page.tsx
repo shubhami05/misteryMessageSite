@@ -144,7 +144,7 @@ const DashboardPage = () => {
 
 
     return (
-        <div className='min-h-screen my-8 mx-4 md:mx-8 lg:mx-auto p-6 bg-slate-200 dark:bg-white-600 rounded w-full max-w-6xl'>
+        <div className='min-h-screen my-8 mx-4 md:mx-8 lg:mx-auto p-6 rounded w-full max-w-6xl'>
             <h1 className='text-4xl font-bold mb-4'>User Dashboard</h1>
             <div className='mb-4'>
                 <h2 className='text-lg font-semibold mb-2'>

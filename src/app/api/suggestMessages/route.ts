@@ -1,5 +1,5 @@
 
-import { OpenAIStream, StreamingTextResponse, streamText } from 'ai';
+import { OpenAIStream, StreamingTextResponse } from 'ai';
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
@@ -16,11 +16,12 @@ export async function POST(req: Request) {
         
         const response = await openai.completions.create({
             model: 'gpt-3.5-turbo-instruct',
-            max_tokens: 400,
+            max_tokens: 200,
             stream: true,
             prompt,
         });
         const stream = OpenAIStream(response)
+        console.log(stream);
         return new StreamingTextResponse(stream);
     }
     catch (error) {
