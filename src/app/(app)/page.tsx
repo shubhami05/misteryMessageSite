@@ -69,7 +69,8 @@ const Home = () => {
       <Separator className="w-full" />
       <section className="px-1 md:px-4 w-full max-w-xl min-h-screen flex flex-col justify-center items-center gap-10">
         <h1 className="text-xl md:text-3xl text-center font-bold">Frequently Asked Questions?</h1>
-        <Accordion type="multiple" className="text-left px-1 max-w-sm md:min-w-full  ">
+        <Accordion type="multiple" className="text-left px-1 max-w-sm md:min-w-full 
+         ">
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it free to Signup?</AccordionTrigger>
             <AccordionContent>
